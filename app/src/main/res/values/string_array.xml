@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="poscode_list">
+        <item>35</item>
+        <item>28</item>
+        <item>37</item>
+        <item>12</item>
+        <item>18</item>
+        <item>10</item>
+        <item>04</item>
+        <item>22</item>
+        <item>26</item>
+        <item>25</item>
+        <item>07</item>
+        <item>30</item>
+        <item>24</item>
+        <item>06</item>
+        <item>02</item>
+        <item>01</item>
+        <item>20</item>
+        <item>29</item>
+        <item>32</item>
+        <item>31</item>
+        <item>23</item>
+        <item>27</item>
+        <item>14</item>
+        <item>17</item>
+        <item>15</item>
+        <item>13</item>
+        <item>21</item>
+        <item>34</item>
+        <item>03</item>
+        <item>08</item>
+        <item>11</item>
+        <item>33</item>
+        <item>36</item>
+        <item>16</item>
+        <item>09</item>
+        <item>05</item>
+        <item>19</item>
+    </string-array>
+
+    <string-array name="UOM_List">
+        <item>Select</item>
+        <item>BAGS (BAG)</item>
+        <item>BALE (BAL)</item>
+        <item>BUNDLES (BDL)</item>
+        <item>BUCKLES (BKL)</item>
+        <item>BILLIONS OF UNITS (BOU)</item>
+        <item>BOX (BOX)</item>
+        <item>BOTTLES (BTL)</item>
+        <item>BUNCHES (BUN)</item>
+        <item>CANS (CAN)</item>
+        <item>CUBIC METER (CBM)</item>
+        <item>CUBIC CENTIMETER (CCM)</item>
+        <item>CENTIMETER (CMS)</item>
+        <item>CARTONS (CTN)</item>
+        <item>DOZEN (DOZ)</item>
+        <item>DRUM (DRM)</item>
+        <item>GREAT GROSS (GGR)</item>
+        <item>GRAMS (GMS)</item>
+        <item>GROSS (GRS)</item>
+        <item>GROSS YARDS (GYD)</item>
+        <item>KILOGRAMS (KGS)</item>
+        <item>KILOLITER (KLR)</item>
+        <item>KILOMETRE (KME)</item>
+        <item>MILLILITRE (MLT)</item>
+        <item>METERS (MTR)</item>
+        <item>NUMBERS (NOS)</item>
+        <item>PACKS (PAC)</item>
+        <item>PIECES (PCS)</item>
+        <item>PAIRS (PRS)</item>
+        <item>QUINTAL (QTL)</item>
+        <item>ROLLS (ROL)</item>
+        <item>SETS (SET)</item>
+        <item>SQUARE FEET (SQF)</item>
+        <item>SQUARE METERS (SQM)</item>
+        <item>SQUARE YARDS (SQY)</item>
+        <item>TABLETS (TBS)</item>
+        <item>TEN GROSS (TGM)</item>
+        <item>THOUSANDS (THD)</item>
+        <item>TONNES (TON)</item>
+        <item>TUBES (TUB)</item>
+        <item>US GALLONS (UGS)</item>
+        <item>UNITS (UNT)</item>
+        <item>YARDS (YDS)</item>
+        <item>OTHERS (OTH)</item>
+    </string-array>
+
+    <!--<string-array name="UOM_List">
+        <item>Select</item>
+        <item>Packet (Pk)</item>
+        <item>Litre (Lt)</item>
+        <item>MilliLitre (Ml)</item>
+        <item>Gram (Gm)</item>
+        <item>KiloGram (Kg)</item>
+        <item>Bag (Bg)</item>
+        <item>Box (Bx)</item>
+        <item>Number (No)</item>
+        <item>Metre (Mt)</item>
+        <item>Dozen (Dz)</item>
+        <item>Sachet (Sa)</item>
+        <item>Sheet (St)</item>
+        <item>Bottle (Bt)</item>
+        <item>Plate (Pl)</item>
+        <item>Piece (Pc)</item>
+    </string-array>-->
+    <string-array name="sales_report">
+        <item>Bill Wise Report</item>
+        <item>Day Wise Report</item>
+        <item>Duplicate Bill Report</item>
+        <item>Month Wise Report</item>
+        <item>Tax Report</item>
+        <item>Transaction Report</item>
+        <item>Void Bill Report</item>
+
+    </string-array>
+    <string-array name="inventory_report">
+        <item>Category Wise Report</item>
+        <item>Department Wise Report</item>
+        <item>Fast Selling Item Wise Report</item>
+        <item>Item Wise Report</item>
+    </string-array>
+    <string-array name="employee_customer_report">
+        <item>Customer Detailed Report</item>
+        <item>Customer Wise Report</item>
+        <!--<item>Supplier Wise Report</item>-->
+        <item>User Detailed Report</item>
+        <item>User Wise Report</item>
+        <item>Salesman Detailed Report</item>
+        <item>Salesman Wise Report</item>
+    </string-array>
+    <string-array name="gst_report">
+        <item>GSTR1-B2B</item>
+        <!--<item>GSTR1-B2BA</item>-->
+        <item>GSTR1-B2CL</item>
+        <!--<item>GSTR1-B2CLA</item>-->
+        <item>GSTR1-B2CS</item>
+        <!--<item>GSTR1-B2CSA</item>-->
+        <!--<item>GSTR1-CDN</item>-->
+        <item>GSTR1-HSN Summary</item>
+        <item>GSTR1-Documents Issued</item>
+        <!--<item>GSTR2-Registered</item>-->
+        <!--<item>GSTR2-UnRegistered</item>-->
+        <!--<item>GSTR2-Registered Amend</item>-->
+        <!--<item>GSTR2-UnRegistered Amend</item>-->
+    </string-array>
+</resources>

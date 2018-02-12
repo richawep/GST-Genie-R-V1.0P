@@ -1,0 +1,1 @@
+include ':app', ':wepbase', ':printers', ':merchantsdk-releasev49', ':mSwipe'

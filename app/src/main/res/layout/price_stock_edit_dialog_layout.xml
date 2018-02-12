@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:background="@drawable/side_nav_bar"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@mipmap/ic_form_update" />
+
+        <TextView
+            android:id="@+id/tv_price_stock_edit_dialog_title"
+            style="@style/TV_Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="@string/update_price_and_stock"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:padding="20dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/item_name"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_item_name"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textColor="@drawable/edit_text_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:hint="@string/barcode"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_item_barcode"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textColor="@drawable/edit_text_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/existing_stock"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_existing_stock"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:textColor="@drawable/edit_text_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/new_stock"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_new_stock"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/mrp"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_mrp"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/retail_price"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_retail_price"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/wholesale_price"
+                android:padding="2dp"
+                app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_price_stock_edit_dialog_whole_sale_price"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight=".001"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".3">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".5" />
+
+        <Button
+            android:id="@+id/bt_price_stock_edit_dialog_update"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/update" />
+
+        <Button
+            android:id="@+id/bt_price_stock_edit_dialog_clear"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/clear" />
+
+        <Button
+            android:id="@+id/bt_price_stock_edit_dialog_close"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/close" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".5" />
+
+    </LinearLayout>
+</LinearLayout>

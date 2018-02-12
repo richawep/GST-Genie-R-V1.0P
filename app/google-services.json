@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "525129911198",
+    "firebase_url": "https://gstgenier.firebaseio.com",
+    "project_id": "gstgenier",
+    "storage_bucket": "gstgenier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525129911198:android:81d7c9b1294182b0",
+        "android_client_info": {
+          "package_name": "pos.wepindia.com.retail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525129911198-fk7d9tvi752m901v29h94dcnt1v27h8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pos.wepindia.com.retail",
+            "certificate_hash": "fd7fb4b1a1b12edb63318535b1b6651baf47aece"
+          }
+        },
+        {
+          "client_id": "525129911198-k8q04mvn7j9dkgdfpsvhmmd7neb77j3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL1s2YYkzpi44Ft2lLV2rz7CO3ogBMIiU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525129911198-k8q04mvn7j9dkgdfpsvhmmd7neb77j3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

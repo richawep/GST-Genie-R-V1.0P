@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@drawable/side_nav_bar"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:srcCompat="@mipmap/ic_form_update" />
+
+        <TextView
+            android:id="@+id/tv_price_discount_change_dialog_title"
+            style="@style/TV_Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left|center"
+            android:text="@string/price_discount_change"
+            android:textColor="@android:color/background_light" />
+
+        <ImageView
+            android:id="@+id/iv_price_discount_change_dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:srcCompat="@mipmap/ic_delete" />
+
+    </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:padding="5dp"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="left|center"
+                    android:text="@string/item_name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="left|center"
+                    android:text="@string/mrp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="left|center"
+                    android:text="@string/rate" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:layout_margin="2dp">
+
+                <EditText
+                    android:id="@+id/et_price_discount_change_dialog_item_name"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:gravity="left|center"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:background="@drawable/round_shape_draw"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/et_price_discount_change_dialog_mrp"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:gravity="left|center"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:background="@drawable/round_shape_draw"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/et_price_discount_change_dialog_rate"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:gravity="left|center"
+                    android:background="@drawable/round_shape_draw"
+                    android:inputType="numberDecimal" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="left|center"
+                    android:text="@string/discount_percent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="left|center"
+                    android:text="@string/discount_amount" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:layout_margin="2dp">
+
+                <EditText
+                    android:id="@+id/et_price_discount_change_dialog_discount_per"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:gravity="left|center"
+                    android:background="@drawable/round_shape_draw"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/et_price_discount_change_dialog_discount_amount"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:gravity="left|center"
+                    android:background="@drawable/round_shape_draw"
+                    android:inputType="numberDecimal" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight=".1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="left|center"
+                    android:text="Quantity" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:background="@drawable/round_shape_draw"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_price_discount_change_dialog_qty_minus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:src="@mipmap/ic_item_minus" />
+
+                <EditText
+                    android:id="@+id/et_price_discount_change_dialog_quantity"
+                    style="@style/ET_Owner_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_shape_draw"
+                    android:gravity="center"
+                    android:inputType="numberSigned"
+                    android:padding="5dp" />
+
+                <ImageView
+                    android:id="@+id/iv_price_discount_change_dialog_qty_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:src="@mipmap/ic_item_plus" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight=".001"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".5">
+
+        <Button
+            android:id="@+id/bt_price_discount_change_dialog_apply"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/apply" />
+
+    </LinearLayout>
+</LinearLayout>

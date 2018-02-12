@@ -1,0 +1,591 @@
+<resources>
+    <string name="app_name">GST Genie R</string>
+
+    <string name="nameValidation">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_.#</string>
+    <string name="gstinValidation">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+
+    <!-- Login Screen layout strings -->
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="exit">Exit</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="invalidUser">Invalid Username</string>
+    <string name="invalidPassword">Invalid Password</string>
+    <string name="emptyUser">Username  cannot be empty</string>
+    <string name="emptyPassword">Password cannot be empty</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- Owners details fragment strings -->
+    <string name="firm_name">Firm Name*</string>
+    <string name="phone">Phone*</string>
+    <string name="email">Email*</string>
+    <string name="address">Address*</string>
+    <string name="pos">Pos*</string>
+    <string name="is_main_office">Is main office</string>
+    <string name="gstin">GSTIN</string>
+    <string name="reference_no">Reference no</string>
+    <string name="bill_no_prefix">Bill no prefix</string>
+    <string name="gst_in_hint">eg.00ABCDE0123A1ZZ</string>
+
+    <!-- Header & footer fragment strings -->
+    <string name="apply">Apply</string>
+    <string name="header_text">Header Text</string>
+    <string name="footer_text">Footer Text</string>
+    <string name="header_text_line_one">Header Text Line 1</string>
+    <string name="header_text_line_two">Header Text Line 2</string>
+    <string name="header_text_line_three">Header Text Line 3</string>
+    <string name="header_text_line_four">Header Text Line 4</string>
+    <string name="header_text_line_five">Header Text Line 5</string>
+    <string name="footer_text_line_one">Footer Text Line 1</string>
+    <string name="footer_text_line_two">Footer Text Line 2</string>
+    <string name="footer_text_line_three">Footer Text Line 3</string>
+    <string name="footer_text_line_four">Footer Text Line 4</string>
+    <string name="footer_text_line_five">Footer Text Line 5</string>
+
+    <!-- Machine fragment strings -->
+    <string name="close">Close</string>
+    <string name="factory_reset_title">Factory Reset (deletes all the current data &amp; settings)</string>
+    <string name="factory_reset">Factory Reset</string>
+    <string name="back_up">Back Up</string>
+    <string name="restore_default_title">Restore Default (only settings are reset)</string>
+    <string name="restore_default">Restore Default</string>
+
+    <!-- HomeActivity screen strings -->
+    <string name="customer_master">Customer Master</string>
+    <string name="item_master">Item Master</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
+    <string name="configuration">Configuration</string>
+    <string name="dayend">Day End</string>
+    <string name="billing">Billing</string>
+    <string name="wep_pos">Wep Pos</string>
+    <string name="price_stock">Price/Stock</string>
+    <string name="supplier_details">Supplier Details</string>
+    <string name="supplier_item_linkage">Supplier Item Linkage</string>
+    <string name="company_mail_address">wep@india.com</string>
+    <string name="manual_dayend_message">"Day end is manual</string>
+    <string name="auto_dayend_message">"Day end is in auto mode. Kindly goto settings to change date manually.</string>
+    <string name="randomDate">27/12/2018</string>
+
+    <!-- Configuration department screen strings -->
+    <string name="department_name">Department Name</string>
+    <string name="serial_no">S.No</string>
+    <string name="department_code">Dept Code</string>
+    <string name="dept_name">Dept Name</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="clear">Clear</string>
+    <string name="department_delete_msg">"Are you sure you want to delete this department. It will delete corresponding Category's and Items also"</string>
+    <string name="brand_delete_msg">"Are you sure you want to delete this brand. It will delete corresponding Category's and Items also"</string>
+
+    <!-- Configuration category screen strings -->
+    <string name="category_name">Category Name</string>
+    <string name="category_code">Categ Code</string>
+    <string name="categ_name">Categ Name</string>
+    <string name="category_delete_msg">"Are you sure you want to Delete this Category. It will delete corresponding Items linkage also"</string>
+
+    <!-- Configuration payment/receipt screen strings -->
+    <string name="expenditure_name">Expenditure Name</string>
+    <string name="description_name">Description Name</string>
+    <string name="description">Description</string>
+    <string name="id">Id</string>
+
+    <!-- Configuration discount screen strings -->
+    <string name="discount_description">Discount Description</string>
+    <string name="discount_name">Discount Name</string>
+    <string name="discount_percent">Discount%</string>
+    <string name="discount_amount">Discount Amount</string>
+    <string name="percent">Percent</string>
+    <string name="amount">Amount</string>
+    <string name="two_digits_after_decimal">*Please note % entered is taken upto 2 digits after decimal</string>
+
+    <!-- Configuration other charges screen strings -->
+    <string name="chargeable">Chargeable</string>
+    <string name="charges_modes">Charges Modes</string>
+    <string name="modes">Modes</string>
+
+    <!-- Configuration coupon screen strings -->
+    <string name="barcode">Barcode</string>
+
+    <!-- Configuration loyalty screen strings -->
+    <string name="amount_eligible_to_reward_pt">Amount Eligible for Reward Points</string>
+    <string name="amt_equivalent_to_reward_pts">Amount Equivalent to Reward Points</string>
+    <string name="amt_equivalent_to_one_reward_pts">Amount Equivalent to 1 Reward Point</string>
+    <string name="min_reward_pts_to_redeem">Minimum Reward Points to Redeem</string>
+    <string name="please_enter_in_amount">Please enter in amount.</string>
+
+    <!-- Billing screen strings -->
+    <string name="billing_add">+</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="home_delivery">Home Delivery</string>
+    <string name="wholesale_price">Whole Sale Price</string>
+    <string name="save_bill">Save Bill</string>
+    <string name="print_bill">Print Bill</string>
+    <string name="proceed_to_pay">Proceed To Pay</string>
+    <string name="fav">Fav</string>
+    <string name="department">Department</string>
+    <string name="category">Category</string>
+    <string name="items">Items</string>
+    <string name="search_customer_name_or_phone">Customer Name/Phone</string>
+    <string name="phone_no">Phone No</string>
+    <string name="search_items_name_barcode_short_code">Barcode,ItemName or ShortCode</string>
+    <string name="short_code">Short Code</string>
+    <string name="name">Name</string>
+    <string name="mrp">MRP</string>
+    <string name="sp">SP</string>
+    <string name="quantity">Qty</string>
+    <string name="hold_bill">Hold Bill</string>
+    <string name="resume_bill">Resume Bill</string>
+    <string name="reprint_bill">Reprint Bill</string>
+    <string name="delete_bill">Delete Bill</string>
+    <string name="inter_state">InterState</string>
+    <string name="bill_number">Bill No</string>
+    <string name="count">Count</string>
+    <string name="discount">Discount</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="cgst_rate">CGST Rate</string>
+    <string name="cess_rate">cess Rate</string>
+    <string name="sgst_rate">SGST Rate</string>
+    <string name="igst_rate">IGST Rate</string>
+    <string name="cgst_amount">CGST Amount</string>
+    <string name="cess_amount">cess Amount</string>
+    <string name="sgst_amount">SGST Amount</string>
+    <string name="igst_amount">IGST Amount</string>
+    <string name="other_charges">Other Charges</string>
+    <string name="taxable_value">Taxable Value</string>
+    <string name="tax_amounts">Tax Amount</string>
+    <string name="hsn">HSN</string>
+    <string name="rate">Rate</string>
+    <string name="disc">Disc</string>
+    <string name="zero">0</string>
+    <string name="sales_man_id">Sales Man ID</string>
+    <string name="search_items_name_barcode">Barcode or ItemName</string>
+    <string name="hold_resume_bill">Hold/Resume Bill</string>
+    <string name="billing_list_selected_item_delete_msg">"Are you sure you want to delete this item from the list."</string>
+    <string name="billing_list_all_item_delete_msg">"Are you sure you want to delete all the item(s) from the list."</string>
+    <string name="no_item_to_delete_message">No item to delete</string>
+    <string name="clear_screen_message">Are you sure to clear the screen</string>
+    <string name="customer_statecode_same_as_owner_message">You have choosen state same as owner. Therefore this cannot be interstate transaction. Either choose another state or uncheck interstate box</string>
+    <string name="total_taxable_value">Total Taxable Value</string>
+    <string name="retail_price_item">Retail Price</string>
+    <string name="less_stock_message">Stock is less, present stock quantity is  </string>
+    <string name="no_rate_choosen_message">No Rate choosen</string>
+    <string name="choose_one_rate_message">Kindly choose only one rate</string>
+
+
+    <!-- Supplier details fragment file string -->
+    <string name="supplier_name">Name*</string>
+    <string name="supplier_address">Address</string>
+
+
+    <!-- Add item master dialog strings -->
+    <string name="save">Save</string>
+    <string name="uom">UOM*</string>
+    <string name="brand">Brand</string>
+    <string name="barcode_item">Barcode</string>
+    <string name="item_name">ItemName</string>
+    <string name="item_long_name">Item Long Name</string>
+    <string name="short_code_item">Short Code</string>
+    <string name="short_name">Item Short Name*</string>
+    <string name="mrp_item">MRP</string>
+    <string name="retail_price">Retail Price*</string>
+    <string name="purchase_price">Purchase Price</string>
+    <string name="pack_size">Pack Size</string>
+    <string name="hsn_code">HSNCode</string>
+    <string name="expire_date">Expire Date</string>
+    <string name="browse_image">Browse Image</string>
+    <string name="active">Active</string>
+
+    <string name="item_info">Item Information</string>
+    <string name="tax_info">GST Tax Rates</string>
+    <string name="image_and_status">Image &amp; Status</string>
+
+    <!-- Item master list fragment screen -->
+    <string name="generate_csv">Generate CSV</string>
+    <string name="browse_file">Browse File</string>
+    <string name="upload_file">Upload File</string>
+    <string name="file_path">File Path:</string>
+    <string name="select_file">Select File</string>
+    <string name="in_active">Inactive</string>
+    <string name="all">All</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="uom_item">UOM</string>
+
+
+    <string name="file_picker">File Picker</string>
+    <!-- Customer master list fragment screen -->
+
+    <string name="search_customer_or_phone">Search Customer or Phone no</string>
+    <string name="last_trans">Last Petty Transn</string>
+    <string name="total_trans">Total Petty Transn</string>
+    <string name="credit_amt">Credit Amt</string>
+
+    <!-- Add new customer master fragment screen strings -->
+    <string name="add_new_customer">Add New Customer</string>
+    <string name="edit_customer">Edit Customer</string>
+    <string name="customer_name">Customer Name*</string>
+    <string name="alternate_phone_number">Alternate Number</string>
+    <string name="email_id">Email Id</string>
+    <string name="building_name">Building Name</string>
+    <string name="state">State</string>
+    <string name="mode">Mode</string>
+    <string name="city">City</string>
+    <string name="pincode">Pincode</string>
+    <string name="pan_card">PanCard</string>
+    <string name="customer_gstin">Customer GSTIN</string>
+    <string name="credit_limit">Credit Limit</string>
+    <string name="deposit_amt">Deposit Amt</string>
+    <string name="opening_balance">Opening Balance</string>
+    <string name="cust_phone_no">Phone No*</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="duplicate_phone_error_msg">This phone no already exist with different user</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="address_info">Address Info</string>
+
+    <!-- Resume bills screen string -->
+    <string name="hold_bill_list">Hold Bill List</string>
+    <string name="hold_bill_no">Hold Bill No</string>
+    <string name="total_item_count">Total Item Count</string>
+    <string name="bill_amt">Bill Amount</string>
+    <string name="cancel">Cancel</string>
+    <string name="populate">Populate</string>
+
+    <string name="date">Date</string>
+    <string name="resume">Resume</string>
+
+    <!-- Proceed to pay screen strings -->
+    <string name="pay">Pay</string>
+    <string name="pay_and_print">Pay &amp; Print</string>
+    <string name="payment_modes">Payment Modes</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="round_off">Round Off</string>
+    <string name="total_paid">Total Paid Amount</string>
+    <string name="difference">Differences</string>
+    <string name="petty_cash">Petty Cash</string>
+    <string name="wallet">Wallet</string>
+    <string name="card">Card</string>
+    <string name="tax_amount">Tax</string>
+    <string name="discount_not_applicable_in_reverse_message">Discount is not applicable in reverse tax</string>
+    <string name="choose_one_discount_message">Kindly choose only one discount</string>
+    <string name="reward_points_disabled_message">Reward Points feature is disabled</string>
+    <string name="no_discount_choosen_message">No discount choosen</string>
+    <string name="discount_not_applicable_in_itemwise_discount_message">Discount not allowed here as itemwise discount is enabled</string>
+    <string name="accumulated_reward_points_less_than_limit">This customer cannot redeem as minimum reward points limit is not reached</string>
+    <string name="no_reward_points_to_redeem">No reward points to redeem</string>
+    <string name="invalid_information">Invalid Information</string>
+    <string name="insufficient_information">Insufficient Information</string>
+    <string name="invalid_attempt">Invalid Attempt</string>
+    <string name="incomplete_action">Incomplete Action</string>
+    <string name="zero_no_print_bill">Number of bill prints should be greater than zero</string>
+    <string name="empty_no_print_bill">Number of bill prints cannot be empty.</string>
+    <string name="totalPaidAmount_less_than_billAmount_message">Check Bill Amount is Paid or not. Total Paid Amount is less than Bill Amount</string>
+    <string name="empty_owner_pos_message">Owner pos not configured.Kindly enter owner details in Settings</string>
+    <string name="inappropriate_entry">Inappropriate Entry</string>
+    <string name="invalid_salesmanId_message">Invalid SalesMan Id</string>
+    <string name="inactive_customer_message">This customer is inactive</string>
+    <string name="amount_greater_than_billamt_error_message">Other Card amount cannot be greater than bill amount</string>
+    <string name="overwrite_payment_amount_confirmation_message">This payment mode is already present. Do you want to overwrite the amount</string>
+    <string name="no_of_bill_prints">No of Bill Prints</string>
+    <string name="autosetting_cust_State_message">Auto setting customer state</string>
+    <string name="additional_disc_per">Additional Discount %</string>
+    <string name="please_select_discount_message">Please select discount</string>
+    <string name="remaining_amount">Remaining Amount</string>
+    <string name="pending_amount">Pending Amount</string>
+    <string name="return_amount">Amount To Return</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="cash">Cash</string>
+    <string name="e_wallet">E-Wallet</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="credit_customer">Credit Customer</string>
+    <string name="sodexo">Sodexo</string>
+    <string name="m_swipe">MSwipe</string>
+    <string name="coupon">Coupon</string>
+    <string name="other_cards">Other Cards</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="redeem">Redeem</string>
+    <string name="total_reward_point_accumulated">Total reward points accumulated</string>
+    <string name="limit_to_redeem_reward_points">Limit to redeem reward points</string>
+    <string name="reward_points_to_redeem">Reward points to redeem</string>
+    <string name="paid_mode_delete_msg">Are you sure to delete this payment mode</string>
+    <string name="text_message_payment_default">Your Credit Balance Amount is less than Payable Amount. Do you want to continue with Partial Payment?</string>
+    <string name="text_message_payment_zero_negative">Your Credit Balance Amount is less than Payable Amount. You can Pay by  Credit or Other Mode.</string>
+    <string name="text_message_payment_zero">Your Credit Balance Amount is less than Payable Amount. You can Pay by  Credit or Partial Payment.</string>
+    <string name="text_message_payment_CreditLimit_reached">Your Credit Limit has been reached. </string>
+    <string name="note">Note</string>
+    <string name="no_due_amount_message">Please note no due amount to be paid.</string>
+    <!--<string name="leaving_without_applying_checked_discount">Please note you have not applied </string>-->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+
+    <!-- Add role screen strings -->
+    <string name="add_role">Add Role</string>
+    <string name="update_permission">Update Permission</string>
+    <string name="delete_role">Delete Role</string>
+    <string name="role_list">Role List</string>
+    <string name="access_permission_for_role">Access Permission for Role</string>
+    <string name="enter_a_role">Enter a Role</string>
+    <!-- User management screen strings -->
+    <string name="designation">Designation</string>
+    <string name="role">Role*</string>
+    <string name="aadhar">Aadhar</string>
+    <string name="user_management">User Management</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="um_login">Login*</string>
+    <string name="um_password">Password*</string>
+    <string name="um_name">Name*</string>
+    <string name="um_mobile">Mobile*</string>
+    <string name="um_role">Role</string>
+    <string name="um_State">State</string>
+    <string name="um_default_user_click_error_message">default user is not modifiable</string>
+
+    <!-- AppSettings Fragment file strings -->
+    <string name="owner_details">Owner Details</string>
+    <string name="header_and_footer">Header &amp; Footer</string>
+    <string name="others">Others</string>
+    <string name="gst">GST</string>
+    <string name="machine">Machine</string>
+    <string name="payment_mode_configuration">Payment Mode Configuration</string>
+    <string name="loading_settings">Loading Settings</string>
+    <string name="please_wait">Please wait ..</string>
+
+    <!-- Configuration brand screen string -->
+    <string name="brand_name">Brand Name</string>
+    <string name="brand_code">Brand Code</string>
+
+    <!-- Configuration Fragment file strings -->
+    <string name="payment_receipt">Payment/Receipt</string>
+    <string name="loyalty">Loyalty</string>
+    <string name="reward_points">Reward Points</string>
+
+    <!-- Payment mode configuration file strings -->
+    <string name="razor_pay">Razor Pay</string>
+    <string name="key_id">Key Id</string>
+    <string name="secret_key">Secret Key</string>
+    <string name="aeps">AEPS</string>
+    <string name="aeps_appid">App Id</string>
+    <string name = "aeps_merchantId">Merchant Id</string>
+
+    // Item Masters
+    <string name="itemNameMessage">Kindly enter item short name </string>
+    <string name="itemUOMMessage">Kindly select item UOM </string>
+    <string name="itemRetailPriceMessage">Kindly enter item retail price </string>
+    <string name="retailPriceGreaterThanMRPError">Retail Price cannot be greater than MRP</string>
+    <string name="wholePriceGeaterThanRetailError">Wholesale Price cannot be greater than retail price</string>
+
+    <!-- Supplier linkage item fragment screen file string -->
+    <string name="link_item">Link Item</string>
+    <string name="unlink_item">Unlink Item</string>
+    <string name="supply_type">Supply Type(Goods/Supply)</string>
+    <string name="cgst_rate_per">CGST Rate(%)</string>
+    <string name="cess_rate_per">cess Rate(%)</string>
+    <string name="utgst_sgst_rate_per">UTGST/SGST Rate(%)</string>
+    <string name="igst_rate_per">IGST Rate(%)</string>
+    <string name="pur_rate">Pur Rate</string>
+
+    <!-- Purchase order fragment screen file strings -->
+    <string name="generate_po">Generate PO</string>
+    <string name="update_po">Update PO</string>
+    <string name="supplier_name_title">Supplier Name</string>
+    <string name="supplier_phone">Supplier Phone</string>
+    <string name="supplier_address_title">Supplier Address</string>
+    <string name="purchase_order">Purchase Order</string>
+    <string name="item_name_title">Item Name</string>
+    <string name="enter_quantity">Enter the quantity</string>
+    <string name="add_item">Add Item</string>
+    <string name="supplier_gstin">Supplier GSTIN</string>
+    <string name="supplier_state_code">Supplier StateCode</string>
+    <string name="additional_charge">Additional Charge</string>
+    <string name="additional_charge_name">Additional Charge Name</string>
+    <string name="additional_amount">Additional Amount</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="igst">IGST</string>
+    <string name="cgst">CGST</string>
+    <string name="utgst_sgst">UTGST/SGST</string>
+    <string name="cess">cess</string>
+
+    <!-- Goods inward note fragment screen file string -->
+    <string name="goods_inward_note">Goods Inward Note</string>
+    <string name="save_note">Save Note</string>
+    <string name="goods_inward">Goods Inward</string>
+    <string name="invoice_no">Invoice No</string>
+    <string name="invoice_date">Invoice Date</string>
+
+
+
+    <!-- Price stock edit dialog screen file string -->
+    <string name="existing_stock">Existing Stock</string>
+    <string name="new_stock">New Stock</string>
+    <string name="update_price_and_stock">Update Price and Stock</string>
+    <string name="search_items_name_or_barcode">Barcode or ItemName</string>
+
+    <!-- Price change and discount option dialog string -->
+    <string name="price_discount_change">Price/Discount Change</string>
+    <string name="price_quantity_info">Price &amp; Quantity Information</string>
+
+    <!-- Reports Fragment file strings -->
+    <string name="sales_report">Sales Report</string>
+    <string name="inventory_report">Inventory Report</string>
+    <string name="employee_customer_report">Employee/Customer Report</string>
+    <string name="gst_report">GST Reports</string>
+    <string name="gst_link">GST Link</string>
+    <string name="total">Total</string>
+    <string name="report_exported_successfully">Report exported successfully</string>
+
+    <!-- Reports Fragment file strings -->
+    <string name="item">Item</string>
+    <string name="tax">Tax</string>
+    <string name="total_bills">Total Bills</string>
+    <string name="igst_amt">IGST Amt</string>
+    <string name="cgst_amt">CGST Amt</string>
+    <string name="utgst_sgst_amt">UTGST/SGST Amt</string>
+    <string name="cess_amt">cess Amt</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="reprint_count">Reprint Count</string>
+    <string name="month">Month</string>
+    <string name="tax_percent">Tax Percent</string>
+    <string name="tax_amount_report">Tax Amount</string>
+    <string name="taxable_amount">Taxable Amount</string>
+    <string name="cash_payment">Cash Payment</string>
+    <string name="card_payment">Card Payment</string>
+    <string name="othercard_payment">OtherCard Payment</string>
+    <string name="coupon_payment">Coupon Payment</string>
+    <string name="petty_cash_payment">PettyCash Payment</string>
+    <string name="wallet_payment">Wallet Payment</string>
+    <string name="mswipe_payment">MSwipe Payment</string>
+    <string name="aeps_payment">AEPS Payment</string>
+    <string name="categ_code">Categ. Code</string>
+    <string name="dept_code">Dept. Code</string>
+    <string name="total_items">Total Items</string>
+    <string name="menu_code">Menu Code</string>
+    <string name="total_price">Total Price</string>
+    <string name="item_no">Item no.</string>
+    <string name="modifier_amount">Modifier Amount</string>
+    <string name="cust_id">Cust. Id</string>
+    <string name="credit_payment">Credit Payment</string>
+    <string name="supplier_code">Supplier Code</string>
+    <string name="user_id">User Id</string>
+    <string name="recipient_gstin">Recipient GSTIN</string>
+    <string name="recipient_state_code">Recipient State Code</string>
+    <string name="recipient_name">Recipient Name</string>
+    <string name="value">Value</string>
+    <string name="gst_rate">GST Rate</string>
+    <string name="nature_of_doc">Nature of Document</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="total_number">Total Number</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="net_issued">Net Issued</string>
+    <string name="cust_state_code">Cust. StateCode</string>
+    <string name="supply_type_report">G/S</string>
+
+    <string name="user_login_digits">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@_</string>
+
+    <string name="short_code_empty">Short Code can not be empty for Item Name  </string>
+    <string name="short_code_invalid">Please Enter Short Code as integer for Item Name  </string>
+    <string name="insufficient_information_csv">Please enter all the required data  </string>
+    <string name="item_short_name_empty">Item Name can not be empty for Short Code  </string>
+    <string name="item_short_name_invalid">Please Enter Item Name as character for Short Code  </string>
+    <string name="item_long_name_invalid">Please Enter Item Name as character for Short Code  </string>
+    <string name="supply_type_empty">Supply Type can not be empty for Item Name  </string>
+    <string name="supply_type_invalid">Please Enter Supply Type as character for Item Name  </string>
+    <string name="rate_empty">Rate can not be empty for Item Name  </string>
+    <string name="rate_invalid">Please Enter Rate as decimal for Item Name  </string>
+    <string name="retail_price_empty">Retail Price can not be empty for Item Name  </string>
+    <string name="retail_price_invalid">Please Enter Retail Price as decimal for Item Name  </string>
+    <string name="mrp_empty">MRP can not be empty for Item Name  </string>
+    <string name="mrp_invalid">Please Enter MRP as decimal for Item Name  </string>
+    <string name="whole_sale_price_empty">Whole Sale Price can not be empty for Item Name  </string>
+    <string name="whole_sale_price_invalid">Please Enter Whole Sale Price as decimal for Item Name  </string>
+    <string name="quantity_empty">Quantity can not be empty for Item Name  </string>
+    <string name="quantity_invalid">Please Enter Quantity as decimal for Item Name  </string>
+    <string name="uom_empty">UOM can not be empty for Item Name  </string>
+    <string name="uom_invalid">Please Enter UOM as character for Item Name  </string>
+    <string name="header_value_empty">Please include following headings in the csv file  </string>
+    <string name="cgst_rate_empty">CGST Rate can not be empty for Item Name  </string>
+    <string name="cgst_rate_invalid">Please Enter CGST Rate as decimal for Item Name  </string>
+    <string name="sgst_rate_empty">SGST Rate can not be empty for Item Name  </string>
+    <string name="sgst_rate_invalid">Please Enter SGST Rate as decimal for Item Name  </string>
+    <string name="igst_rate_empty">IGST Rate can not be empty for Item Name  </string>
+    <string name="igst_rate_invalid">Please Enter IGST Rate as decimal for Item Name  </string>
+    <string name="cess_rate_empty">cess Rate can not be empty for Item Name  </string>
+    <string name="cess_rate_invalid">Please Enter CESS Rate as decimal for Item Name  </string>
+    <string name="discount_empty">Discount can not be empty for Item Name  </string>
+    <string name="discount_invalid">Please Enter Discount as decimal for Item Name  </string>
+    <string name="favorite_invalid">Please Enter Favorite as 0 or 1 for Item Name  </string>
+    <string name="active_invalid">Please Enter active/inactive as 0 or 1 for Item Name  </string>
+    <string name="image_invalid">Please valid image URL for Item Name  </string>
+    <string name="please_enter_item_name">Please Enter Item Name</string>
+    <string name="department_code_empty">Department Code can not be empty for Item Name  </string>
+    <string name="department_code_invalid">Please Enter Department Code as integer for Item Name  </string>
+    <string name="please_enter_department_code">Please Enter Department Code</string>
+
+    <string name="database_brand_null">Kindly configure brand in the database </string>
+    <string name="brand_code_invalid">Please Enter Brand Code as integer for Item Name  </string>
+
+    <string name="database_department_null">Kindly configure department in the database </string>
+    <string name="department_not_match">This department code is not present in the database for Item Name</string>
+
+    <string name="category_code_empty">Category Code can not be empty for Item Name  </string>
+    <string name="category_code_invalid">Please Enter Category Code as integer for Item Name  </string>
+    <string name="please_enter_category_code">Please Enter Category Code</string>
+
+    <string name="database_category_null">Kindly configure category in the database </string>
+    <string name="category_not_match">This category code is not present in the database </string>
+
+    <string name="same_item_different_uom">Same items cannot exist with different UOM  </string>
+    <string name="same_item_same_mrp">Duplicate Item: Same item short name, barcode and UOM cannot exist with same MRP  </string>
+
+    <!-- POS device code array -->
+    <string-array name="poscode">
+        <item>Select</item>
+        <item>Andaman and Nicobar Islands 35</item>
+        <item>Andhra Pradesh 28</item>
+        <item>Andhra Pradesh(New) 37</item>
+        <item>Arunachal Pradesh 12</item>
+        <item>Assam 18</item>
+        <item>Bihar 10</item>
+        <item>Chandigarh 04</item>
+        <item>Chattisgarh 22</item>
+        <item>Dadra and Nagar havelli 26</item>
+        <item>Daman And Diu 25</item>
+        <item>Delhi 07</item>
+        <item>Goa 30</item>
+        <item>Gujrat 24</item>
+        <item>Haryana 06</item>
+        <item>Himachal Pradesh 02</item>
+        <item>Jammu and Kashmir 01</item>
+        <item>Jharkhand 20</item>
+        <item>Karnataka 29</item>
+        <item>Kerala 32</item>
+        <item>Lakshadweep Islands 31</item>
+        <item>Madhya Pradesh 23</item>
+        <item>Maharastra 27</item>
+        <item>Manipur 14</item>
+        <item>Meghalaya 17</item>
+        <item>Mizoram 15</item>
+        <item>Nagaland 13</item>
+        <item>Odisha 21</item>
+        <item>Pondicherry 34</item>
+        <item>Punjab 03</item>
+        <item>Rajastahan 08</item>
+        <item>Sikkim 11</item>
+        <item>Tamil Nadu 33</item>
+        <item>Telangana 36</item>
+        <item>Tripura 16</item>
+        <item>Uttar Pradesh 09</item>
+        <item>Uttarakhand 05</item>
+        <item>West Bengal 19</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

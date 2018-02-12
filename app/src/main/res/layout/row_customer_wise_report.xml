@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_custid"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/cust_id" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_name"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/name" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_total_bills"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/total_bills" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_lastran"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/last_trans" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_cash"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/cash_payment" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_card"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/card_payment" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_coupon"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/coupon_payment" />
+
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_credit"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/petty_cash_payment" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_wallet"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/wallet_payment" />
+
+    <TextView
+        android:id="@+id/tv_customerwise_row_totaltran"
+        style="@style/TV_Billing_Item_List"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:paddingStart="2dp"
+        android:text="@string/total_trans" />
+
+</LinearLayout>

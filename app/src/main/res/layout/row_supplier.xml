@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvSNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            style="@style/TV_Billing_Item_List"
+            android:text="S.No" />
+
+        <TextView
+            android:id="@+id/tvSupplierName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TV_Billing_Item_List"
+            android:text="Supplier Name" />
+
+        <TextView
+            android:id="@+id/tvSupplierPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TV_Billing_Item_List"
+            android:text="Supplier Phone" />
+
+        <TextView
+            android:id="@+id/tbSupplierGSTIN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TV_Billing_Item_List"
+            android:text="Supplier GSTIN" />
+
+        <TextView
+            android:id="@+id/tvSupplierAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TV_Billing_Item_List"
+            android:text=" Supplier Address" />
+
+
+        <ImageView
+            android:id="@+id/imgBtnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+</LinearLayout>

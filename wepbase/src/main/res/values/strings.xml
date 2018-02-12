@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Database exists file strings -->
+    <string name="please_check_sd_card_storage_present">Please check SD card storage presence and try again.</string>
+    <string name="unable_to_get_external_storage_path">Unable to get external storage path and try again.</string>
+
+</resources>

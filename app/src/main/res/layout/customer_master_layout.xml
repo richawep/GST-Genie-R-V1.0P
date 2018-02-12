@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:background="@drawable/side_nav_bar"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@mipmap/ic_add_new_item" />
+
+        <TextView
+            android:id="@+id/tv_cust_master_title"
+            style="@style/TV_Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="@string/add_new_customer"
+            android:textColor="@android:color/background_light"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="2.5"
+        android:padding="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".01"
+                android:layout_margin="5dp">
+
+                <TextView
+                    style="@style/TV_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bottom_shape_draw"
+                    android:text="@string/personal_info" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/gstin"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_gstin"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/gstinValidation"
+                        android:maxLength="15"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/customer_name"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_name"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:digits="@string/nameValidation"
+                        android:maxLength="30"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/cust_phone_no"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_phone_no"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/email_id"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_email_id"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/reward_points"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_loyalty_point"
+                        style="@style/ET_Owner_Details"
+                        android:enabled="false"
+                        android:textColor="@color/textDisable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="5"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/address"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_address"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress"
+                        android:maxLength="80"/>
+                </android.support.design.widget.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/credit_amt"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_credit_amt"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textColor="@color/textDisable"
+                        android:inputType="numberDecimal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/credit_limit"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_credit_limit"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<CheckBox
+                    android:id="@+id/cb_customer_master_add_dialog_deposit_amt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="bottom"
+                    android:text="@string/deposit_amt"
+                    android:textSize="18dp" />-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_opening_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/opening_balance"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_opening_balance"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_weight="1">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_depositAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/deposit_amt"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_customer_master_add_dialog_deposit_amt"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:inputType="numberDecimal"
+                        android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sc_customer_master_dialog_active"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    style="@style/ET_Owner_Details"
+                    android:text="@string/active" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight=".001"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".2">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bt_customer_master_add_dialog_save"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/bt_customer_master_add_dialog_clear"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/clear" />
+
+        <Button
+            android:id="@+id/bt_customer_master_add_dialog_close"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/close" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

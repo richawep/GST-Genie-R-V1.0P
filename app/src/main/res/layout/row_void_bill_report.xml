@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_date"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/date" />
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_bill_number"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/bill_number" />
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_totalItems"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/total_items" />
+
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_IGST_amount"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/igst_amount" />
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_CGST_amount"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/cgst_amount" />
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_SGST_amount"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/sgst_amount" />
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_cess_amount"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/cess_amount" />
+
+        <TextView
+            android:id="@+id/tv_row_voidBill_bill_amount"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/bill_amount" />
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

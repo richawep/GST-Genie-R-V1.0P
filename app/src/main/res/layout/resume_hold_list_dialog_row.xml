@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/ll_resume_hold_list_dialog_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_resume_hold_list_dialog_row_slno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            style="@style/TV_Billing_Item_List" />
+
+        <TextView
+            android:id="@+id/tv_resume_hold_list_dialog_row_bill_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            style="@style/TV_Billing_Item_List" />
+
+        <TextView
+            android:id="@+id/tv_resume_hold_list_dialog_row_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TV_Billing_Item_List" />
+
+        <TextView
+            android:id="@+id/tv_resume_hold_list_dialog_row_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TV_Billing_Item_List" />
+
+        <Button
+            android:id="@+id/bt_resume_hold_list_dialog_row_resume"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/resume" />
+
+        <ImageView
+            android:id="@+id/iv_resume_hold_list_dialog_row_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:src="@mipmap/ic_delete"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

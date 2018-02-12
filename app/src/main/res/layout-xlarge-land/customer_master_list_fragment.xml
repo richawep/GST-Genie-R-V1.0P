@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:padding="5dp">
+
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_customer_master_list_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:drawableRight="@android:drawable/ic_search_category_default"
+            android:hint="@string/search_customer_or_phone"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_customer_master_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:checkedButton="@+id/rb_customer_master_list_all"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_customer_master_list_all"
+                style="@style/TV_Owner_Details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/all" />
+
+            <RadioButton
+                android:id="@+id/rb_customer_master_list_active"
+                style="@style/TV_Owner_Details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/active" />
+
+            <RadioButton
+                android:id="@+id/rb_customer_master_list_inactive"
+                style="@style/TV_Owner_Details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/in_active" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_customer_master_list_count"
+            style="@style/Button_Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/bt_customer_master_list_add"
+            android:layout_margin="3dp"
+            android:textSize="14dp"
+            android:padding="5dp"
+            android:text="@string/zero" />
+
+        <Button
+            android:id="@+id/bt_customer_master_list_add"
+            style="@style/Button_Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="@string/billing_add"
+            android:layout_alignParentEnd="true"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2"
+        android:background="@drawable/side_nav_bar"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_slno"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/serial_no" />
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_name"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_phone_no"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:text="@string/phone_no" />
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_last_trans"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/last_trans" />
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_total_trans"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/total_trans" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_credit_amt"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/credit_amt" />
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_loyalty_points"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="end"
+            android:text="@string/reward_points" />
+
+        <TextView
+            android:id="@+id/tv_customer_master_list_title_State"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center_horizontal"
+            android:text="@string/mode" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".1" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.4"
+        android:layout_marginBottom="15dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_customer_master_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_shape_draw"
+            android:scrollbars="vertical" />
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

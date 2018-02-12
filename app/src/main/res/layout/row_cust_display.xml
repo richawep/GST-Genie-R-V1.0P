@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/row_item_background"
+            android:id="@+id/ll_row_cust">
+                <TextView
+                    android:id="@+id/tv_sno"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/serial_no" />
+
+                <TextView
+                    android:id="@+id/tv_custName"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/tv_custPhoneNo"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:text="@string/phone_no" />
+
+                <TextView
+                    android:id="@+id/tv_last_trans"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/last_trans" />
+
+                <TextView
+                    android:id="@+id/tv_total_trans"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/total_trans" />
+
+
+                <TextView
+                    android:id="@+id/tv_credit_amt"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/credit_amt" />
+                <TextView
+                    android:id="@+id/tv_loyalty_points"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:gravity="end"
+                    android:paddingEnd="@dimen/margin10"
+                    android:text="@string/reward_points" />
+
+                <TextView
+                    android:id="@+id/tv_State"
+                    style="@style/TV_Billing_Screen_black"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:gravity="center"
+                    android:text="@string/state" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".1" />
+
+        </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

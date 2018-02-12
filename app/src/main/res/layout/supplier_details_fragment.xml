@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <LinearLayout
+            android:id="@+id/rowCaption"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:orientation="horizontal"
+            android:background="@drawable/side_nav_bar">
+
+            <TextView
+                android:id="@+id/tv_supplier_details_title_sno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                style="@style/TV_Billing_Screen"
+                android:text="@string/serial_no" />
+
+            <TextView
+                android:id="@+id/tv_supplier_details_title_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TV_Billing_Screen"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/tv_supplier_details_title_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TV_Billing_Screen"
+                android:text="@string/phone_no" />
+
+            <TextView
+                android:id="@+id/tv_supplier_details_title_gstin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TV_Billing_Screen"
+                android:text="@string/gstin" />
+
+            <TextView
+                android:id="@+id/tv_supplier_details_title_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TV_Billing_Screen"
+                android:text="@string/supplier_address" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_supplier_details_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".6"
+            android:background="@drawable/round_shape_draw">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:text="@string/supplier_name"
+                    style="@style/TV_Owner_Details" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/av_supplier_details_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:completionThreshold="1"
+                    android:maxLength="50"
+                    android:drawableRight="@mipmap/searchicon_img"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:text="@string/gstin"
+                    style="@style/TV_Owner_Details" />
+
+                <EditText
+                    android:id="@+id/et_supplier_details_gstin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLength="15"
+                    android:textAllCaps="true"
+                    android:singleLine="true" />
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:text="@string/phone"
+                    style="@style/TV_Owner_Details" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/av_supplier_details_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:completionThreshold="1"
+                    android:hint="+91"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:text="@string/address"
+                    style="@style/TV_Owner_Details" />
+
+                <EditText
+                    android:id="@+id/et_supplier_details_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="eg. M.G Road"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:singleLine="true" />
+
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight=".001"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".2">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".7" />
+
+        <Button
+            android:id="@+id/bt_supplier_details_add"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/add" />
+
+        <Button
+            android:id="@+id/bt_supplier_details_update"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/update" />
+
+        <Button
+            android:id="@+id/bt_supplier_details_clear"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/clear" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".7" />
+
+    </LinearLayout>
+
+</LinearLayout>

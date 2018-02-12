@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RetailCode_2_2_2018_Reports_CSV.iml" filepath="$PROJECT_DIR$/RetailCode_2_2_2018_Reports_CSV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mSwipe/mSwipe.iml" filepath="$PROJECT_DIR$/mSwipe/mSwipe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/merchantsdk-releasev49/merchantsdk-releasev49.iml" filepath="$PROJECT_DIR$/merchantsdk-releasev49/merchantsdk-releasev49.iml" />
+      <module fileurl="file://$PROJECT_DIR$/printers/printers.iml" filepath="$PROJECT_DIR$/printers/printers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wepbase/wepbase.iml" filepath="$PROJECT_DIR$/wepbase/wepbase.iml" />
+    </modules>
+  </component>
+</project>

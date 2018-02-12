@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_color_monochromatic"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_itemwise_itemno"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/item_no" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_itemname"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/item_name" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_soldqty"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/quantity" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_discount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/discount" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_tax"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/tax" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_taxablevalue"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/taxable_value" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_modifier"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:visibility="gone"
+            android:text="@string/modifier_amount" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_item_wise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.4"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bottom_shape_draw"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_color_monochromatic"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_bill_total"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/total" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_total_item_name"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:visibility="invisible"
+            android:text="@string/item_name" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_total_sold_qty"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:visibility="invisible"
+            android:text="@string/quantity" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_total_discount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/discount" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_total_tax"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/tax" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_total_taxable_value"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/bill_amt" />
+
+        <TextView
+            android:id="@+id/tv_itemwise_total_modifier_amount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/bill_amt" />
+
+    </LinearLayout>
+
+</LinearLayout>

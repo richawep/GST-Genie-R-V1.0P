@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/um_name"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_name"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="50"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/um_mobile"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_mobile"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/um_login"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_login"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/um_password"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_password"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_um_role_title"
+                        style="@style/TV_Owner_Details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:text="@string/role" />
+
+                    <Spinner
+                        android:id="@+id/sp_um_role_list"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tl_sales_man_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/sales_man_id"
+                        android:padding="2dp"
+                        android:visibility="invisible"
+                        app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_um_sales_man_id"
+                            style="@style/ET_Owner_Details"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/designation"
+                        android:padding="2dp"
+                        app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_um_designation"
+                            style="@style/ET_Owner_Details"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="15"
+                            android:inputType="text" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sc_user_management_dialog_active"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:checked="true"
+                        android:layout_gravity="center|right"
+                        style="@style/TV_Owner_Details"
+                        android:text="@string/active" />
+                </LinearLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/aadhar"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_aadhar"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="12"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/email_id"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_email"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/address_info"
+                    android:padding="2dp"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_um_address"
+                        style="@style/ET_Owner_Details"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="80"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".001"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:orientation="horizontal"
+                android:background="@drawable/side_nav_bar"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_um_serial_no_title"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:text="@string/serial_no" />
+
+                <TextView
+                    android:id="@+id/tv_um_name"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/tv_um_role"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:text="@string/um_role" />
+                <TextView
+                    android:id="@+id/tv_um_state"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:text="@string/um_State" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_um_list_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight=".001"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".2">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bt_um_submit"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/submit" />
+
+        <Button
+            android:id="@+id/bt_um_delete"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/delete" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".3" />
+
+        <Button
+            android:id="@+id/bt_um_clear"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="@string/clear" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

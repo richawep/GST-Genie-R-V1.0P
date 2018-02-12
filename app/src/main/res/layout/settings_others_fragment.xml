@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_above="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_weight="1.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_others_date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Date and Time " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_date_time_auto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Auto" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_date_time_manual"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Manual" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_price_change"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Price Change " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_price_change"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_price_change_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_price_change_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_bill_with_stock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Bill with Stock " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_bill_with_stock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_bill_with_stock_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_bill_with_stock_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_item_code_reset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:visibility="gone"
+                                android:text="Short Code" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_short_code_reset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_short_code_reset_auto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Auto" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_short_code_reset_manual"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Manual" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_bill_no_daily_reset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Bill No Daily Reset " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_bill_no_daily_reset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_bill_no_daily_reset_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_bill_no_daily_reset_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_print_owner_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Owner's Details Print" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_print_owner_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_owner_detail_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_owner_detail_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_bill_amount_round_off"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Bill Amount Round off" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_bill_amount_round_off"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_bill_amount_round_off_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_bill_amount_round_off_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_sales_man_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Sales Man ID Display" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_sales_man_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_sales_man_id_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_sales_man_id_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_weight="0.8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_others_tax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+
+                                android:text="Tax " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_tax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_tax_forward"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Forward" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_tax_reverse"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reverse" />
+                            </RadioGroup>
+                            <TextView
+                                android:id="@+id/tv_others_discount_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Discount Type " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_discount_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_discount_type_item_wise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Itemwise" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_discount_type_bill_wise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Billwise" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_print_difference_discount_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="MRP-Retail Price Difference Print " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_print_difference_discount_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_difference_discount_amount_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_difference_discount_amount_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_fast_billing_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Fast Billing Mode " />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_fast_billing_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_fast_billing_mode_items"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Items" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_fast_billing_mode_dept_items"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dept / Items" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_fast_billing_mode_dept_categ_items"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dept / Categ / Items" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_cummulative_heading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:visibility="gone"
+                                android:text="Cummulative Report Heading" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_cummulative_heading"
+                                android:layout_width="wrap_content"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_cummulative_heading_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_cummulative_heading_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_loyalty_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/reward_points" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_loyalty_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_loyalty_points_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_loyalty_points_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_header_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Header Print Bold" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_header_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_header_bold_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_header_bold_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_print_service"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:visibility="gone"
+                                android:text="Service Name Print" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_print_service"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_service_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_service_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+
+
+                            <TextView
+                                android:id="@+id/tv_others_environment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:visibility="gone"
+                                android:text="Environment" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_environment"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_environment_production"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Production" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_environment_demo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Demo" />
+                                <RadioButton
+                                    android:id="@+id/rb_others_environment_testing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Testing" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_print_preview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Print Preview "
+                                android:visibility="gone" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_print_preview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_preview_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_print_preview_disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tv_others_tax_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Tax Type"
+                                android:visibility="gone" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_others_tax_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_tax_type_item_wise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Item wise" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_others_tax_type_bill_wise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bill wise" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_button"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOtherSettingHLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/boxBtn"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/bt_others_apply"
+                style="@style/Button_Login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:text="@string/apply" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

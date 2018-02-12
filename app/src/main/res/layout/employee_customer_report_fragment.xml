@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText,UselessParent">
+
+            <TextView
+                android:id="@+id/tvHeadingReportNameSelection_employee_customer"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="2sp" />
+
+            <TableRow
+                android:id="@+id/rowReportNameSelection_employee_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvHeadingReportNameSelection"
+                android:layout_below="@+id/tvHeadingReportNameSelection">
+
+                <Spinner
+                    android:id="@+id/spnrReportNameSelection_employee_customer"
+                    android:layout_width="400dp"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:entries="@array/employee_customer_report"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tvHeadingReportDateSelection_employee_customer"
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="2sp" />
+
+            <TableRow
+                android:id="@+id/rowReportDateSelection_employee_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvHeadingReportDateSelection_employee_customer"
+                android:layout_below="@+id/tvHeadingReportDateSelection_employee_customer"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvDateFrom_employee_customer"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="2sp" />
+
+                <Button
+                    android:id="@+id/btn_ReportDateFrom_employee_customer"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/btn_calendar"
+                    android:onClick="From" />
+
+                <EditText
+                    android:id="@+id/etReportDateStart_employee_customer"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="5"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="From Date"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tvDateTo_employee_customer"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="2sp" />
+
+                <EditText
+                    android:id="@+id/etReportDateEnd_employee_customer"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="5"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="To Date"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/btn_ReportDateTo_employee_customer"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/btn_calendar"
+                    android:onClick="To" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/rowReportButtons_employee_customer"
+                android:visibility="invisible"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TableRow
+                android:id="@+id/rowReportButtons_employee_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rowReportDateSelection_employee_customer"
+                android:layout_below="@+id/rowReportDateSelection_employee_customer"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btn_ReportPrint_employee_customer"
+                    style="@style/Button_Login"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@android:color/white"
+                    android:onClick="PrintReport"
+                    android:visibility="invisible"
+                    android:text="Print" />
+
+                <Button
+                    android:id="@+id/btn_ReportExport_employee_customer"
+                    style="@style/Button_Login"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@android:color/white"
+                    android:onClick="ExportReport"
+                    android:text="Export" />
+
+                <Button
+                    android:id="@+id/btn_ReportView_employee_customer"
+                    style="@style/Button_Login"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@android:color/white"
+                    android:onClick="ViewReport"
+                    android:text="View" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tvHorizontalLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rowReportButtons_employee_customer"
+                android:layout_marginTop="5dp" />
+
+            <TableRow
+                android:id="@+id/rowReportPersonId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBottom="@+id/tvHorizontalLine">
+
+                <TextView
+                    android:id="@+id/tvReportPersonId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Id : "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spnrUsers"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+
+                <Spinner
+                    android:id="@+id/spnrCustomers"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+
+                <Spinner
+                    android:id="@+id/spnrSalesman"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+
+                <EditText
+                    android:id="@+id/etReportPersonId"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:visibility="gone"
+                    android:inputType="text" />
+            </TableRow>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/black" />
+
+    <FrameLayout
+        android:id="@+id/employee_customer_report_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>

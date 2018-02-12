@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_color_monochromatic"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_daywise_date"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/date" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_bills"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/total_bills" />
+
+        <TextView
+            android:id="@+id/tv_daywise_discount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/discount" />
+
+        <TextView
+            android:id="@+id/tv_daywise_igst"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/igst_amount" />
+
+        <TextView
+            android:id="@+id/tv_daywise_cgst"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/cgst_amount" />
+
+        <TextView
+            android:id="@+id/tv_daywise_utgst_sgst"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/utgst_sgst_amt" />
+
+        <TextView
+            android:id="@+id/tv_daywise_cess"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/cess_amt" />
+
+        <TextView
+            android:id="@+id/tv_daywise_bill_amount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/bill_amount" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_day_wise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.4"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bottom_shape_draw"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_color_monochromatic"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_bill_total"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/total" />
+
+
+
+        <TextView
+            android:id="@+id/tv_daywise_total_Items"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:visibility="invisible"
+            android:text="@string/item" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_discount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/discount" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_igst"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/igst_amount" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_cgst"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/cgst_amount" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_utgst_sgst"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/utgst_sgst_amt" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_cess"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/cess_amt" />
+
+        <TextView
+            android:id="@+id/tv_daywise_total_bill_amount"
+            style="@style/TV_Billing_Screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:text="@string/bill_amt" />
+
+    </LinearLayout>
+
+</LinearLayout>

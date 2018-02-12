@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <!-- <item
+        android:id="@+id/add"
+       android:icon="@drawable/ic_action_bar_home_delivery"
+        app:actionLayout="@layout/action_view_button"
+        app:showAsAction="always"
+        android:title="Add"/>
+
+    <item
+        android:id="@+id/action_home_delivery"
+        android:icon="@drawable/actionbar_home_delivery_icon"
+        android:title="Home Delivery"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_promo"
+        android:icon="@drawable/actionbar_promo_icon"
+        app:showAsAction="always"
+        android:title="Promotion"/>-->
+
+  <item
+      android:id="@+id/action_settings"
+      android:title="@string/settings"
+      android:icon="@mipmap/ic_settings"
+      app:showAsAction="always" />
+  <item
+      android:title=" "
+      app:showAsAction="always" />
+  <item
+      android:id="@+id/action_logout"
+      android:title="@string/settings"
+      android:icon="@mipmap/logout5121"
+      app:showAsAction="always" />
+</menu>

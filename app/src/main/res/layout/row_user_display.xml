@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_user_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/row_item_background"
+        >
+
+        <TextView
+            android:id="@+id/tv_um_serial_no_title"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:paddingStart="3dp"
+            android:text="@string/serial_no" />
+
+        <TextView
+            android:id="@+id/tv_um_name"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/tv_um_role"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:text="@string/um_role" />
+
+        <TextView
+            android:id="@+id/tv_um_state"
+            style="@style/TV_Billing_Screen_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:text="@string/um_State" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

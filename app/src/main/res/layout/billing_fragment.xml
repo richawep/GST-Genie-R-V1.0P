@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <!-- Billing search, selected items list and total amount portion. -->
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+           <!-- <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".0001">
+                <EditText
+                    android:id="@+id/et_billing_screen_hidden_barcode"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:inputType="number">
+                    <requestFocus/></EditText>
+            </TableRow>-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:gravity="center">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autocomplete_billing_items_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:completionThreshold="1"
+                    android:drawableRight="@android:drawable/ic_search_category_default"
+                    android:hint="@string/search_items_name_barcode"
+                    android:textColor="@android:color/black" >
+                    <requestFocus />
+                </AutoCompleteTextView>
+
+                <CheckBox
+                    android:id="@+id/cb_billing_short_code_status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".2"
+                    android:gravity="left|center"
+                    android:text="@string/short_code"
+                    android:visibility="gone"
+                    android:textSize="18dp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edt_billing_SalesManId"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:hint="@string/sales_man_id"/>
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".01"
+                android:layout_marginStart="5dp"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/cb_billing_inter_state"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight=".8"
+                    android:gravity="left|center"
+                    android:text="@string/inter_state"
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/sp_billing_inter_state"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/bill_number"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_bill_number"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0000" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/count"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_items_selected_counter"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0000" />
+                </android.support.design.widget.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:background="@drawable/side_nav_bar"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_name"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_hsn"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hsn" />
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_mrp"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:text="@string/mrp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_rate"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:text="@string/rate" />
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_qty"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:text="@string/quantity" />
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_discount"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:text="@string/discount" />
+
+                <TextView
+                    android:id="@+id/tv_billing_sil_title_amount"
+                    style="@style/TV_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/taxable_value" />
+
+                <ImageView
+                    android:id="@+id/iv_billing_sil_title_remove_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_remove"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:background="@drawable/bottom_shape_draw">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_billing_selected_item_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".01">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/igst_rate"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_igst"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/cgst_rate"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_cgst"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/sgst_rate"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_sgst"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/cess_rate"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_cess"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/round_off"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_roundoff"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".01">
+
+                <TextView
+                    android:id="@+id/tv_billing_discount_percent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="0"
+                    android:visibility="gone"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/discount"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_discount"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/other_charges"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_other_charges"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/total_taxable_value"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_taxable_value"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:hint="@string/total_amount"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_total_bill_amount"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:enabled="false"
+                        android:text="0.00" />
+                </android.support.design.widget.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".001"
+            android:background="@android:color/black" />
+
+        <!-- Billing fav items list, customer info and payment mode portion -->
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!-- customer info layout -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1">
+
+                <TextView
+                    android:id="@+id/tv_billing_CustId"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    android:text="-1"/>
+                <AutoCompleteTextView
+                    android:id="@+id/autocomplete_billing_customer_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:singleLine="true"
+                    android:completionThreshold="1"
+                    android:drawableRight="@android:drawable/ic_search_category_default"
+                    android:hint="@string/search_customer_name_or_phone"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/bt_billing_customer_add"
+                    style="@style/Button_Add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text="@string/billing_add" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".001"
+                android:padding="5dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/phone_no"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc"
+                    android:background="@drawable/bottom_shape_draw" >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_customer_mobile"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/gstin"
+                    app:hintTextAppearance="@style/Text_Hint_Size_Inc"
+                    android:background="@drawable/bottom_shape_draw" >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_billing_customer_gstin"
+                        style="@style/ET_Customized"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="textCapCharacters"
+                        android:enabled="false" />
+                </android.support.design.widget.TextInputLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight=".001"
+                android:background="@android:color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:visibility="invisible">
+
+                <CheckBox
+                    android:id="@+id/cb_billing_home_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|center"
+                    android:text="@string/home_delivery"
+                    android:textSize="18dp" />
+
+                <EditText android:id="@+id/edt_billing_InvoiceDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Invoice Date"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2">
+
+                <RadioGroup
+                    android:id="@+id/rg_billing_sp_mrp_wp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checkedButton="@+id/rb_billing_rp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_billing_mrp"
+                        style="@style/TV_Owner_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/mrp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_billing_rp"
+                        style="@style/TV_Owner_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/retail_price_item" />
+
+                    <RadioButton
+                        android:id="@+id/rb_billing_wp"
+                        style="@style/TV_Owner_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/wholesale_price" />
+
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:layout_margin="3dp"
+                android:background="@drawable/bottom_shape_draw">
+
+                <Button
+                    android:id="@+id/bt_billing_fav"
+                    style="@style/BT_DISPLAY_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_fav_filled"
+                    android:gravity="center"
+                    android:background="@drawable/side_nav_bar"
+                    android:layout_margin="2dp"
+                    android:text="@string/fav" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".01"
+                    android:visibility="gone"
+                    android:background="@android:color/black" />
+
+                <Button
+                    android:id="@+id/bt_billing_department"
+                    style="@style/BT_DISPLAY_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_config_department"
+                    android:gravity="center"
+                    android:background="@drawable/side_nav_bar"
+                    android:layout_margin="2dp"
+                    android:text="@string/department" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".01"
+                    android:visibility="gone"
+                    android:background="@android:color/black" />
+
+                <Button
+                    android:id="@+id/bt_billing_category"
+                    style="@style/BT_DISPLAY_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_config_category"
+                    android:gravity="center"
+                    android:background="@drawable/side_nav_bar"
+                    android:layout_margin="2dp"
+                    android:text="@string/category" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".01"
+                    android:visibility="gone"
+                    android:background="@android:color/black" />
+
+                <Button
+                    android:id="@+id/bt_billing_items"
+                    style="@style/BT_DISPLAY_Billing_Screen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_others"
+                    android:gravity="center"
+                    android:background="@drawable/side_nav_bar"
+                    android:layout_margin="2dp"
+                    android:text="@string/items" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_billing_fav_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight=".001"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".06"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_billing_clear"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/clear" />
+
+        <Button
+            android:id="@+id/bt_billing_hold_resume_bill"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/hold_resume_bill" />
+
+        <Button
+            android:id="@+id/bt_billing_delete"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/delete_bill" />
+
+        <Button
+            android:id="@+id/bt_billing_reprint"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/reprint_bill" />
+
+        <Button
+            android:id="@+id/bt_billing_save_bill"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/save_bill" />
+
+        <Button
+            android:id="@+id/bt_billing_print_bill"
+            style="@style/Button_Login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/print_bill" />
+
+        <Button
+            android:id="@+id/bt_billing_proceed_to_pay"
+            style="@style/Button_Proceed_Pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:text="@string/proceed_to_pay" />
+    </LinearLayout>
+
+</LinearLayout>
