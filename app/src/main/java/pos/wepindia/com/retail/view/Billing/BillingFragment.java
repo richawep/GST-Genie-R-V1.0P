@@ -28,6 +28,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -1782,13 +1783,13 @@ public class BillingFragment extends Fragment implements Constants ,OnCustomerAd
 
         @Override
         protected List<ItemMasterBean> doInBackground(Integer... integers) {
-            int iMode = 1, iCategoryCode = 0;
+            int iMode = 1, iDept_CategCode = 0;
             Cursor cursor = null;
             if(integers != null){
                 iMode = integers[0];
                 if(integers.length > 1) {
                     if (integers[1] != null && integers[1] > 0) {
-                        iCategoryCode = integers[1];
+                        iDept_CategCode = integers[1];
                     }
                 }
             }
@@ -1797,11 +1798,11 @@ public class BillingFragment extends Fragment implements Constants ,OnCustomerAd
                     cursor = HomeActivity.dbHandler.getAllItems_Fav();
                     break;
                 case Constants.DEPARTMENT:
-                    cursor = HomeActivity.dbHandler.getAllItems_Active_Departmentwise();
+                    cursor = HomeActivity.dbHandler.getAllItems_Active_Departmentwise(iDept_CategCode);
                     break;
                 case Constants.CATEGORY:
-                    if(iCategoryCode > 0) {
-                        cursor = HomeActivity.dbHandler.getAllItems_Active_Category(iCategoryCode);
+                    if(iDept_CategCode > 0) {
+                        cursor = HomeActivity.dbHandler.getAllItems_Active_Category(iDept_CategCode);
                     } /*else {
                         cursor = HomeActivity.dbHandler.getAllItems_Categorywise();
                     }*/
@@ -3736,10 +3737,20 @@ public class BillingFragment extends Fragment implements Constants ,OnCustomerAd
     @Override
     public void onDeptDataSelect(Department department) {
         //Toast.makeText(myContext,department.getDeptName(),Toast.LENGTH_LONG).show();
-        if(populateDisplayCategoryDataAsyncObject == null){
-            populateDisplayCategoryDataAsyncObject = new PopulateDisplayCategoryDataAsync();
-            populateDisplayCategoryDataAsyncObject.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,department.getDeptCode());
+        if(FAST_BILLING_MODE ==2)
+        {
+            if(populateDisplayCategoryDataAsyncObject == null){
+                populateDisplayCategoryDataAsyncObject = new PopulateDisplayCategoryDataAsync();
+                populateDisplayCategoryDataAsyncObject.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,department.getDeptCode());
+            }
+        } else if (FAST_BILLING_MODE ==1)
+        {
+            if(populateDisplayItemsDataAsyncObject == null){
+                populateDisplayItemsDataAsyncObject = new PopulateDisplayItemsDataAsync();
+                populateDisplayItemsDataAsyncObject.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,Constants.DEPARTMENT, department.getDeptCode());
+            }
         }
+
     }
 
     @Override
@@ -4363,6 +4374,139 @@ public class BillingFragment extends Fragment implements Constants ,OnCustomerAd
             }
         });
 
+        View view1 = getActivity().getCurrentFocus();
+        if (view1 != null) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view1.getWindowToken(), 0);
+        }
+        /*btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(checkCount <=0) {
+                    msgBox.Show(getString(R.string.invalid_attempt),getString(R.string.no_rate_choosen_message));
+                    //dialog.dismiss();
+                    return;
+                }else if(checkCount >1)
+                {
+                    msgBox.Show(getString(R.string.invalid_attempt),getString(R.string.choose_one_rate_message));
+                    return;
+                }
+
+                for(int i=1;i<tbl_rate.getChildCount();i++)
+                {
+                    TableRow row = (TableRow) tbl_rate.getChildAt(i);
+                    CheckBox checkBox = (CheckBox) row.getChildAt(0);
+                    if(checkBox.isChecked())
+                    {
+                        int id = Integer.parseInt(checkBox.getText().toString());
+                        Cursor cursor = HomeActivity.dbHandler.getItemByID(id);
+                        if (cursor!=null && cursor.moveToNext())
+                        {
+                            fill(cursor);
+                            mAddItemToOrderTableList(itemMasterBean, false);
+                        }
+                        break;
+                    }
+                }
+                dialog.dismiss();
+            }
+        });*/
+        int count =1;
+
+        while(cursor!=null && cursor.moveToNext())
+        {
+
+            TableRow row = new TableRow(myContext);
+            row.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            row.setBackgroundResource(R.drawable.row_item_background);
+
+            CheckBox checkBox = new CheckBox(myContext);
+            String item_id = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_id));
+            checkBox.setText(item_id);
+            checkBox.setHeight(40);
+            checkBox.setTextSize(1);
+            checkBox.setVisibility(View.GONE);
+            //checkBox.setTextColor(getResources().getColor(R.drawable.row_item_background));
+            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                    if(isChecked)
+                        checkCount++;
+                    else
+                        checkCount--;
+                }
+            });
+            row.addView(checkBox);
+
+            TextView tvSno = new TextView(myContext);
+            tvSno.setText(""+count);
+            tvSno.setHeight(50);
+            count++;
+            tvSno.setTextSize(20);
+            tvSno.setPadding(5,0,0,0);
+            row.addView(tvSno);
+
+            TextView tvName = new TextView(myContext);
+            tvName.setHeight(50);
+            tvName.setTextSize(20);
+            tvName.setTextColor(Color.parseColor("#000000"));
+            tvName.setText(cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_ItemShortName)));
+            row.addView(tvName);
+
+            TextView tvMrp  = new TextView(myContext);
+            tvMrp.setHeight(50);
+            tvMrp.setTextSize(20);
+            tvMrp.setTextColor(Color.parseColor("#000000"));
+            String mrp = String.format("%.2f", cursor.getDouble(cursor.getColumnIndex(DatabaseHandler.KEY_MRP)));
+            tvMrp.setText(mrp);
+            row.addView(tvMrp);
+
+            row.setTag("TAG");
+            row.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (String.valueOf(view.getTag()) == "TAG") {
+                        TableRow Row = (TableRow) view;
+                        CheckBox checkBox1= (CheckBox) Row.getChildAt(0);
+                        int id = Integer.parseInt(checkBox1.getText().toString());
+                        Cursor cursor = HomeActivity.dbHandler.getItemByID(id);
+                        if (cursor!=null && cursor.moveToNext())
+                        {
+                            fill(cursor);
+                            mAddItemToOrderTableList(itemMasterBean, false);
+                        }else {
+                            Toast.makeText(myContext, "Some error occured", Toast.LENGTH_SHORT).show();
+                            Logger.d(TAG, "Item not found");
+                        }
+                        dialog.dismiss();
+                    }
+                }
+            });
+            tbl_rate.addView(row);
+        }
+    }
+    /*void inflateMultipleRateOptionwithOkButton(Cursor cursor)
+    {
+        checkCount =0;
+        LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.dialog_multiple_item_with_same_name, null, false);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(myContext);
+        builder.setView(view);
+        final AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
+
+        ImageView iv_close = (ImageView)view.findViewById(R.id.iv_close);
+        final TableLayout tbl_rate = (TableLayout)view.findViewById(R.id.tbl_rates);
+        Button btnOk = (Button) view.findViewById(R.id.btnok) ;
+
+        iv_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -4437,7 +4581,7 @@ public class BillingFragment extends Fragment implements Constants ,OnCustomerAd
 
             tbl_rate.addView(row);
         }
-    }
+    }*/
     void fill(Cursor cursor)
     {
         itemMasterBean = new ItemMasterBean();

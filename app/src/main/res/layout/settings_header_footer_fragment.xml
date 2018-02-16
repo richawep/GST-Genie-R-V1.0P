@@ -38,6 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/header_text"
                     android:inputType="text" />
             </TableRow>
@@ -61,6 +62,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/header_text"
                     android:inputType="text" />
             </TableRow>
@@ -84,6 +86,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/header_text"
                     android:inputType="text" />
             </TableRow>
@@ -107,6 +110,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/header_text"
                     android:inputType="text" />
 
@@ -131,6 +135,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/header_text"
                     android:inputType="text" />
             </TableRow>
@@ -154,6 +159,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/footer_text"
                     android:inputType="text" />
             </TableRow>
@@ -177,6 +183,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/footer_text"
                     android:inputType="text" />
             </TableRow>
@@ -201,6 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/footer_text"
+
                     android:inputType="text" />
             </TableRow>
 
@@ -216,6 +224,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+
                     android:text="@string/footer_text_line_four" />
 
                 <EditText
@@ -225,6 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/footer_text"
+
                     android:inputType="text" />
             </TableRow>
 
@@ -247,6 +257,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:hint="@string/footer_text"
                     android:inputType="text" />
 

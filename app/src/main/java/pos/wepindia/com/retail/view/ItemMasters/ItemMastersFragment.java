@@ -466,7 +466,7 @@ public class ItemMastersFragment extends Fragment  implements OnItemAddListetner
                     int mCheckCSVValueType1 = checkCSVTypeValue(colums[4], "Int");
                     if (mCheckCSVValueType == CHECK_DOUBLE_VALUE || mCheckCSVValueType1 == CHECK_INTEGER_VALUE) {
                         mRetailPrice = Double.parseDouble(String.format("%.2f", Double.parseDouble(colums[4])));
-                        if (!(mRetailPrice > 0 && mRetailPrice < 999999998)) {
+                        if (!(mRetailPrice >= 0 && mRetailPrice < 999999998)) {
                             mFlag = true;
                             mUserCSVInvalidValue = "Please enter Retail Price between 0 and 999999998 for item " + colums[0];
                             break;
@@ -488,7 +488,7 @@ public class ItemMastersFragment extends Fragment  implements OnItemAddListetner
                     int mCheckCSVValueType1 = checkCSVTypeValue(colums[5], "Int");
                     if (mCheckCSVValueType == CHECK_DOUBLE_VALUE || mCheckCSVValueType1 == CHECK_INTEGER_VALUE) {
                         mMRP = Double.parseDouble(String.format("%.2f", Double.parseDouble(colums[5])));
-                        if (!(mMRP > 0 && mMRP < 999999998)) {
+                        if (!(mMRP >= 0 && mMRP < 999999998)) {
                             mFlag = true;
                             mUserCSVInvalidValue = "Please enter MRP between 0 and 999999998 for item " + colums[0];
                             break;
@@ -506,7 +506,7 @@ public class ItemMastersFragment extends Fragment  implements OnItemAddListetner
                     int mCheckCSVValueType1 = checkCSVTypeValue(colums[6], "Int");
                     if (mCheckCSVValueType == CHECK_DOUBLE_VALUE || mCheckCSVValueType1 == CHECK_INTEGER_VALUE) {
                         mWholeSalePrice = Double.parseDouble(String.format("%.2f", Double.parseDouble(colums[6])));
-                        if (!(mWholeSalePrice > 0 && mWholeSalePrice < 999999998)) {
+                        if (!(mWholeSalePrice >= 0 && mWholeSalePrice < 999999998)) {
                             mFlag = true;
                             mUserCSVInvalidValue = "Please enter Whole Sale Price between 0 and 999999998 for item " + colums[0];
                             break;
@@ -578,11 +578,11 @@ public class ItemMastersFragment extends Fragment  implements OnItemAddListetner
                     }
                 }
 
-                if (mCGSTRate + mSGSTRate != mIGSTRate) {
+                /*if (mCGSTRate + mSGSTRate != mIGSTRate) {
                     mFlag = true;
                     mUserCSVInvalidValue = "Please note sum of SGST Rate and CGST Rate should between equal to IGST Rate for item " + colums[1];
                     return;
-                }
+                }*/
 
                 // CESS Rate
                 if (colums[10] != null && colums[10].length() > 0 && colums[10].trim().length() > 0) {

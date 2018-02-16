@@ -372,6 +372,9 @@
     <string name="aeps">AEPS</string>
     <string name="aeps_appid">App Id</string>
     <string name = "aeps_merchantId">Merchant Id</string>
+    <string name="create_razorpay_account_message">Create new razorpay account</string>
+    <string name="get_registered_for_aeps_credential_message">Get registered for AEPS credentials. Contact us at </string>
+
 
     // Item Masters
     <string name="itemNameMessage">Kindly enter item short name </string>

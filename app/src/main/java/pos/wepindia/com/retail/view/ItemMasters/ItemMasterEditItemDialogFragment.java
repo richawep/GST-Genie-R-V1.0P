@@ -340,6 +340,14 @@ public class ItemMasterEditItemDialogFragment extends DialogFragment implements 
                 return flag;
             }
         }
+        /*double cgstRate = et_cgstRate.getText().toString().equals("")? 0.00: Double.parseDouble(String.format("%.2f",Double.parseDouble(et_cgstRate.getText().toString().trim())));
+        double sgstRate = et_sgstRate.getText().toString().equals("")? 0.00: Double.parseDouble(String.format("%.2f",Double.parseDouble(et_sgstRate.getText().toString().trim())));
+        double igstRate = et_igstRate.getText().toString().equals("")? 0.00: Double.parseDouble(String.format("%.2f",Double.parseDouble(et_igstRate.getText().toString().trim())));
+        if(cgstRate+sgstRate != igstRate)
+        {
+            MsgBox.Show("Inconsistent Data", "sum of cgstrate and sgstrate should be equal to igstrate");
+            return flag;
+        }*/
         flag = true;
         return flag;
     }

@@ -55,11 +55,22 @@
                 android:background="@drawable/side_nav_bar" >
 
                 <TextView
-                    android:id="@+id/tvCaptionSno"
+                    android:id="@+id/tvId"
                     android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="10dp"
                     android:text=""
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF" />
+
+
+                <TextView
+                    android:id="@+id/tvCaptionSno"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Sno."
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#FFFFFF" />
 
@@ -93,6 +104,7 @@
             android:id="@+id/btnok"
             android:background="@color/widget_color"
             android:text = "@string/ok"
+            android:visibility="gone"
             android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

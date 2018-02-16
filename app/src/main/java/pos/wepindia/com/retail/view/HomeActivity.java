@@ -239,6 +239,7 @@ public class HomeActivity extends WepPrinterBaseActivity
 
         ButterKnife.bind(this, vNavigation);
         txtUserLoggedIn.setText(userName);
+        txtUserLoggedIn.setTextSize(16);
         //getting current date and time using Date class
         DateFormat df = new SimpleDateFormat("dd/MM/yy");
         Date dateobj = new Date();

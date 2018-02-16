@@ -384,7 +384,7 @@ public class LoginActivity extends WepBaseActivity implements Constants {
                     MsgBox.Show("Error","No pdf reader found to open file");
                     return;
                 }
-                File file = new File(Environment.getExternalStorageDirectory().getPath() + "/EasyBill_Documents/" + FILENAME + ".pdf");
+                File file = new File(DOCUMENT_GENERATE_PATH + FILENAME + ".pdf");
                 Intent target = new Intent(Intent.ACTION_VIEW);
                 target.setDataAndType(Uri.fromFile(file),"application/pdf");
                 target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);

@@ -4,12 +4,17 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
 import android.text.InputFilter;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -173,6 +178,7 @@ public class HeaderFooterSettingsFragment extends Fragment{
         }
     }
 
+    int counter =0;
     void applyValidations()
     {
         edtFooterOne.setFilters(new InputFilter[]{new EMOJI_FILTER()});
@@ -185,8 +191,151 @@ public class HeaderFooterSettingsFragment extends Fragment{
         edtHeaderThree.setFilters(new InputFilter[]{new EMOJI_FILTER()});
         edtHeaderFour.setFilters(new InputFilter[]{new EMOJI_FILTER()});
         edtHeaderFive.setFilters(new InputFilter[]{new EMOJI_FILTER()});
+
+        edtFooterOne.addTextChangedListener(restrictLengthWatcher);
+        edtFooterTwo.addTextChangedListener(restrictLengthWatcher);
+        edtFooterThree.addTextChangedListener(restrictLengthWatcher);
+        edtFooterFour.addTextChangedListener(restrictLengthWatcher);
+        edtFooterFive.addTextChangedListener(restrictLengthWatcher);
+
+        edtHeaderOne.addTextChangedListener(restrictLengthWatcher);
+        edtHeaderTwo.addTextChangedListener(restrictLengthWatcher);
+        edtHeaderThree.addTextChangedListener(restrictLengthWatcher);
+        edtHeaderFour.addTextChangedListener(restrictLengthWatcher);
+        edtHeaderFive.addTextChangedListener(restrictLengthWatcher);
+
     }
 
+    TextWatcher restrictLengthWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+            try{
+                if(counter>0)
+                {
+                    counter--;
+                    return;
+                }
+
+
+                if(editable == edtFooterOne.getEditableText())
+                {
+                    String content = edtFooterOne.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtFooterOne.setText(content.substring(0,30));
+                        edtFooterOne.setSelection(edtFooterOne.getText().length());
+
+                    }
+                }
+                else if(editable == edtFooterTwo.getEditableText())
+                {
+                    String content = edtFooterTwo.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtFooterTwo.setText(content.substring(0,30));
+                        edtFooterTwo.setSelection(edtFooterTwo.getText().length());
+
+                    }
+                }
+                else if(editable == edtFooterThree.getEditableText())
+                {
+                    String content = edtFooterThree.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtFooterThree.setText(content.substring(0,30));
+                        edtFooterThree.setSelection(edtFooterThree.getText().length());
+
+                    }
+                }
+                else if(editable == edtFooterFour.getEditableText())
+                {
+                    String content = edtFooterFour.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtFooterFour.setText(content.substring(0,30));
+                        edtFooterFour.setSelection(edtFooterFour.getText().length());
+
+                    }
+                }
+                else if(editable == edtFooterFive.getEditableText())
+                {
+                    String content = edtFooterFive.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtFooterFive.setText(content.substring(0,30));
+                        edtFooterFive.setSelection(edtFooterFive.getText().length());
+
+                    }
+                }
+                else if(editable == edtHeaderOne.getEditableText())
+                {
+                    String content = edtHeaderOne.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtHeaderOne.setText(content.substring(0,30));
+                        edtHeaderOne.setSelection(edtHeaderOne.getText().length());
+
+                    }
+                }
+                else if(editable == edtHeaderTwo.getEditableText())
+                {
+                    String content = edtHeaderTwo.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtHeaderTwo.setText(content.substring(0,30));
+                        edtHeaderTwo.setSelection(edtHeaderTwo.getText().length());
+
+                    }
+                }
+                else if(editable == edtHeaderThree.getEditableText())
+                {
+                    String content = edtHeaderThree.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtHeaderThree.setText(content.substring(0,30));
+                        edtHeaderThree.setSelection(edtHeaderThree.getText().length());
+
+                    }
+                }
+                else if(editable == edtHeaderFour.getEditableText())
+                {
+                    String content = edtHeaderFour.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtHeaderFour.setText(content.substring(0,30));
+                        edtHeaderFour.setSelection(edtHeaderFour.getText().length());
+
+                    }
+                }
+                else if(editable == edtHeaderFive.getEditableText())
+                {
+                    String content = edtHeaderFive.getText().toString();
+                    if(content.length()>30) {
+                        counter++;
+                        edtHeaderFive.setText(content.substring(0,30));
+                        edtHeaderFive.setSelection(edtHeaderFive.getText().length());
+
+                    }
+                }
+            }catch (Exception e)
+            {
+                Logger.e(TAG, "Error occured");
+            }
+
+        }
+    };
    /* @Override
     public void onDestroy() {
         super.onDestroy();

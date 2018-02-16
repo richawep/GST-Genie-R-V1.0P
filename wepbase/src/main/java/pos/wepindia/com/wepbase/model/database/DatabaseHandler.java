@@ -3494,6 +3494,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor getAllItems_Active_Departmentwise(int deptCode)
+    {
+        String query = "SELECT * FROM "+TBL_Item+" WHERE "+KEY_DepartmentCode+" ="+deptCode+" ORDER BY "+KEY_DepartmentCode +" AND "+KEY_isActive+" = 1";
+        Cursor cursor = dbRetail.rawQuery(query,null);
+        return cursor;
+    }
     public Cursor getAllItems_Active_Category(int iCategoryCode)
     {
         String query = "SELECT * FROM "+TBL_Item+" WHERE "+KEY_CategoryCode+" = " +iCategoryCode +" AND "+KEY_isActive+" = 1";
